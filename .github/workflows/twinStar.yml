@@ -79,13 +79,13 @@ jobs:
       - name: Export Parameters
         id: set-params
         run: |
-          echo "::set-output name=EncSpeed::${EncSpeed}"
-          echo "::set-output name=R3NC0D3R::${R3NC0D3R}"
-          echo "::set-output name=VidRes::${VidRes}"
-          echo "::set-output name=JobPostfix::${JobPostfix}"
-          echo "::set-output name=ReSplitDataFile::${ReSplitDataFile}"
-          echo "::set-output name=matrix::${matrix}"
-          echo "::set-output name=safile_json::${safile_json}"
+          echo "EncSpeed=${EncSpeed}" >> $GITHUB_OUTPUT
+          echo "R3NC0D3R=${R3NC0D3R}" >> $GITHUB_OUTPUT
+          echo "VidRes=${VidRes}" >> $GITHUB_OUTPUT
+          echo "JobPostfix=${JobPostfix}" >> $GITHUB_OUTPUT
+          echo "ReSplitDataFile=${ReSplitDataFile}" >> $GITHUB_OUTPUT
+          echo "matrix=${matrix}" >> $GITHUB_OUTPUT
+          echo "safile_json=${safile_json}" >> $GITHUB_OUTPUT
 
   enc_nyaanime:
     name: Encode Phase
